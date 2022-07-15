@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Collection;
 
-@FeignClient(value = "${backend.name:null}", url = "${backend.url:}", fallback = MessageClientFallback.class)
+@FeignClient(value = "messages backend", url = "http://localhost:8082", fallback = MessageClientFallback.class)
 @Primary
 public interface MessageClient {
 

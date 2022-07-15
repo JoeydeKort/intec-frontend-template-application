@@ -1,11 +1,25 @@
 server.port: 8084
 
+management.endpoints.web.exposure.include: "*"
+
+ribbon:
+  serverListRefreshInterval: 1000
+  ConnectTimeout: 6000
+  ReadTimeout: 3000
+
+hystrix.command.default.execution.isolation:
+  thread.timeoutInMilliseconds: 10000
+  strategy: THREAD
+
+feign.hystrix.enabled: true
+
+
 spring:
   application.name: frontend
   cloud.config:
     discovery:
       enabled: true
-      serviceId: config
+
     fail-fast: true
     retry:
       initialInterval: 2000
