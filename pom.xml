@@ -67,6 +67,11 @@
             <artifactId>spring-session-hazelcast</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>be.intecbrussel</groupId>
+            <artifactId>bericht-commons</artifactId>
+            <version>0.0.2</version>
+        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>

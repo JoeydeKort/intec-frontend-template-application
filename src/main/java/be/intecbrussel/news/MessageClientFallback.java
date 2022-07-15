@@ -1,6 +1,7 @@
 package be.intecbrussel.news;
 
 
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,14 +15,14 @@ public class MessageClientFallback implements MessageClient {
 
     @Override
     @GetMapping("/")
-    public Collection<Message> getMessages(){
-        return List.of(new Message());
+    public Collection<MessageDto> getMessages(){
+        return List.of(new MessageDto());
     }
 
     @Override
     @PostMapping("/")
-    public Message createMessage(@RequestBody Message message) {
-        return new Message();
+    public MessageDto createMessage(@RequestBody MessageDto messageDto) {
+        return new MessageDto();
     }
 
 }
